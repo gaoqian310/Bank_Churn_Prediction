@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
+
 
 ## REQUIRED LIBRARIES
 # For data wrangling 
@@ -16,7 +17,7 @@ pd.options.display.max_rows = None
 pd.options.display.max_columns = None
 
 
-# In[2]:
+# In[3]:
 
 
 # Read the data frame
@@ -24,18 +25,39 @@ df = pd.read_csv('Churn_Modelling.csv', delimiter=',')
 df.shape
 
 
-# In[3]:
+# In[4]:
 
 
 # Check columns list and missing values
 df.isnull().sum()
 
 
-# In[4]:
+# In[5]:
 
 
 # Get unique count for each variable
 df.nunique()
+
+
+# In[6]:
+
+
+# drop the columns as explained above
+df = df.drop(["RowNumber", "CustomerId","Surname"], axis = 1)
+
+
+# In[7]:
+
+
+# Review the top rows of what is left of the data frame
+df.head()
+
+
+# In[8]:
+
+
+# Check variable data types
+df.dtypes
 
 
 # In[ ]:
