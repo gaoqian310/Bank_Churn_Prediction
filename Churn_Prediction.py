@@ -60,6 +60,32 @@ df.head()
 df.dtypes
 
 
+# In[9]:
+
+
+# Exploratory Data Analysis
+
+
+# In[20]:
+
+
+# using a pie chart , first create labels
+labels = 'Exited', 'Retained'
+# two parts of pie chart, Exited == 1 and Exited == 0
+sizes = [df.Exited[df['Exited']==1].count(), df.Exited[df['Exited']==0].count()]
+# explode created array-like pie chart, default:None will create a whole pie chart without explode
+explode = (0, 0.15)
+
+# plot
+fig1, ax1 = plt.subplots(figsize=(10, 8))
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')
+# title
+plt.title("Proportion of customer churned and retained", size = 20)
+plt.show()
+
+
 # In[ ]:
 
 
