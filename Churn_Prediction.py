@@ -86,6 +86,10 @@ plt.title("Proportion of customer churned and retained", size = 20)
 plt.show()
 
 
+# #### So about 20% of the customers have churned. 
+# 
+# ###### So the baseline model could be to predict that 20% of the customers will churn. Given 20% is a small number, we need to ensure that the chosen model does predict with great accuracy this 20% as it is of interest to the bank to identify and keep this bunch as opposed to accurately predicting the customers that are retained.
+
 # In[ ]:
 
 
